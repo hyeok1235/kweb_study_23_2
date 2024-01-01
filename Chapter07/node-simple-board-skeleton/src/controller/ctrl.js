@@ -22,7 +22,7 @@ const indexPage = async(req, res, next) => {
 const listArticles = async (req, res, next) => {
     try {
         const {page} = req.params;
-        const {user} = req.sessions;
+        const {user} = req.session;
         const pageNum = parseInt(page, 10);
         if (pageNum <= 0) throw new Error('BAD_REQUEST');
 

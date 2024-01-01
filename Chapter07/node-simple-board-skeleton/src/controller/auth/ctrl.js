@@ -1,4 +1,4 @@
-const {userDAO} = require('../../DAO');
+const {UserDAO} = require('../../DAO');
 const {generatePassword, verifyPassword} = require('../../lib/authentication');
 
 // GET /auth/sign_in

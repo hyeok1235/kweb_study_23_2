@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 
 const controller = require('./controller');
-const errorHandler = require('./lib/error-handler');
+const {errorHandler} = require('./lib/error-handler');
 
 const { MODE, SESSION_SECRET } = process.env;
 
