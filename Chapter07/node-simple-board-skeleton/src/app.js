@@ -2,7 +2,8 @@ const express = require('express');
 const morgan = require('morgan');
 const session = require('express-session');
 
-const { errorHandler } = require('./lib/error-handler');
+const controller = require('./controller');
+const errorHandler = require('./lib/error-handler');
 
 const { MODE, SESSION_SECRET } = process.env;
 
@@ -21,6 +22,8 @@ app.use(session({
 	resave: false,
 	saveUninitialized: true,
 }));
+
+app.use('/', controller);
 
 app.use(errorHandler);
 
